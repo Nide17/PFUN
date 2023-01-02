@@ -1,0 +1,103 @@
+- Instance variable: vars. of the class.
+- Static: final keyword:
+- Local variable: declared inside a block.
+
+- Object = Instance of the class
+- Class variable: static variables: accessed without object instantiation.
+- Attributes = Instance variables
+
+- Arguments replace parameters on the method call.
+- new keyword allocates memory for the object that is being constructed.
+
+1. 
+- BufferedReader - Cathy
+- Scanner - Good to know
+
+2. 
+
+- Local variable: Variables declared inside a method body and used inside it only.
+
+- Instance variable: can be used anywhere else (globally). Best practice: declare instance variables private to be used only inside the class declared in. They are declared inside the class, outside all methods.
+
+- An object has attributes that are implemented as instance variables and carried with it throughout its lifetime.
+
+-A local variable is declared in the body of a method and can be used only from the point at which it’s declared through the end of the method declaration. An instance variable is declared in a class, but not in the body of any of the class’s methods. Also, instance variables are accessible to all methods of the class.
+
+3. methods
+- A constructor is similar to a method but is called implicitly by the new operator to initialize an object’s instance variables at the time the object is created.
+
+- A parameter represents additional information that a method requires to perform its task. Each parameter required by a method is specified in the method’s declaration. An argument is an actual value for a method parameter. When a method is called, the argument values are passed to the corresponding parameters of the method so that it can perform its task
+
+4. Object: copy of the class
+- A class instance creation expression begins with the keyword new and creates a new object
+
+5. printf -> %d, %f, %.2f, %s
+
+6. return: when dealing with a method that has a return type
+
+7. for loops
+--------------
+
+- Counter-controlled repetition uses a variable called counter or control variable to control the number of times a set of statements execute
+
+- number of repetitions is known before the loop begins executing.
+
+- Variables used to store totals are normally initialized to zero before being used in a program.
+
+8. while
+--------
+- sentinel: acts as a break to stop the looping execution.
+• Typically, "for" statements are used for counter-controlled repetition, and "while" statements are sometimes, for sentinel-controlled repetition.
+
+- (also called a signal value, a dummy value or a flag value) is used to indicate the end of data entry.
+
+- allows you to specify that a program should repeat an action while some condition remains true.
+
+- The do...while statement tests the loop-continuation condition after executing the loop’s body
+
+9. if else
+
+10. pseudocode vs algorithm
+----------------------------
+
+- A procedure for solving a problem in terms of the actions to execute and 
+- the order in which they execute is called an algorithm.
+
+- Pseudocode (p. 103) is an informal language that helps you develop algorithms without having to worry about the strict details of Java language syntax.
+
+- only three control structures: the sequence structure, the selection structure, and the repetition structure.
+
+11. counter controlled loop: "for" loop.
+----------------------------------------
+
+Three optional components: 
+	- Initialization of control variable (counter), 
+	- Loop-continuation condition, 
+	- Increment of the control variable.
+
+4 things:
+- control variable (counter)
+- Initial value
+- increment
+- loop-continuation condition
+
+• Typically, for statements are used for counter-controlled repetition and while statements for sentinel-controlled repetition.
+
+12. switch
+----------
+- The switch statement performs different actions based on the possible values of a constant integral expression
+
+- program evaluates the controlling expression and compares its value with each case
+
+13. UML:
+--------
+
+- Single graphical language for communicating the results of any OOAD (object-oriented analysis-and-design) process.
+
+--------------------------------------------------
+
+- Break statement causes immediate exit in a while, for, do...while or switch,  statement.
+
+- The continue statement skips the loop’s remaining body statements and proceeds with its next iteration. 
+
+- & | operators always evaluate both operands.

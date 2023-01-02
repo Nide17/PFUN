@@ -1,0 +1,193 @@
+Agenda of today
+----------------------
+1. Introduction to OOP
+2. Constructors
+3. Inheritance
+4. Interface
+----------------------------
+1. Introduction to Object Oriented Programming(OOP)
+.....................................................................................
+-> OOP involves the use of User defined classes and objects
+-> A class is collection of related data and methods
+-> A package is collection of related class
+-> Object is an instance or reference variable of the class
+-> Object represents real things
+->Object is created using class name and new operator
+->Object is used to access class members (Data and Methods)
+=> OOP involves the use of Inheritance
+-> Inheritance allows the reusability of the program code
+------------------------------------------------------------
+Class Format
+-------------------
+class className
+{
+access specifier data type Data;
+access specifier data type method()
+{
+Statements;
+}
+}
+--------------------
+Access Specifier:
+.....................
+public: data and methods defined as public will be available in the
+whole program
+protected: data and methods available in parent and derived classes
+private: data and methods available only in the class where they are
+defined
+-------------------------
+Class Example
+................
+class MyClassExample
+{
+public String s;
+public void Hello()
+{
+s="Hello CS2 Students";
+System.out.println(s);
+}
+}//end of MyClass
+class MainClass
+{
+public static void main(String args[])
+{
+MyClassExample mc=new MyClassExample();//we create Object mc
+mc.Hello();//Calling method Hello() using object mc
+}
+}
+-----------------------------
+Exercise1:
+------------------
+Write a Java program which uses the concepts of class, 
+object, method and do---while loop to prompts user enter
+a number N less than 10 then displays "I like Java in CS2"- N times
+------------------------------------------------
+Answer
+---------
+import javax.swing.*;
+class MyExercise
+{
+public int n,i;
+public String s;
+public void MyMethod()
+{
+s= "I Like Java in CS2";
+JOptionPane p=new JOptionPane();
+String s1=p.showInputDialog("Enter a number less than 10");
+n=Integer.parseInt(s1);
+i=0;
+if(n<10)
+{
+do
+{
+System.out.println(s);
+i++;
+}
+while(i<=n);
+}
+else
+{
+System.out.println("number out of range");
+}
+}
+}
+class MainClass
+{
+public static void main(String args[])
+{
+MyClassExercise mce=new MyClassExerise();
+mce.MyMethod();
+}
+}
+--------------------------------
+2. Constructor
+-------------------
+A constructor is a method created using class name.
+The following are characteristics of constructor:
+-> A constructor has same name as class name
+-> A constructor does not have a data type
+-> A constructor is initialized up on creation of object.
+---------------------------------------------
+Example of Constructor without parameters
+--------------------------
+class MyClassConstructor
+{
+public String msg="I am in a Constructor";
+public MyClassConstructor()
+{
+System.out.println(msg);
+}
+public String MyMethod()
+{
+System.out.println("I am not a constructor");
+}
+} 
+class MainClass
+{
+public static void main(String args[])
+{
+MyClassConstructor mcc=new MyClassConstructor();
+mcc.MyMethod();
+}
+}
+3. Inheritance
+------------------
+With Inheritance, one class called parent or super class 
+inherits its properties to derived or child classes.
+=> A child class hass full access to parent data and methods
+=> A child class can have additional data and methods 
+=> we use child class to create an object.
+--> Inheritance is implemented using extends keyword
+==> Java does not support multiple inheritance however it 
+      can be implemented using interfaces not classes.
+-----------------------------------------------------------------
+Example
+---------------
+class Parent
+{
+public String msg;
+public void HelloParent()
+{
+msg="I am a Parent Class";
+System.out.println(msg);
+}
+}
+class Child extends Parent
+{
+public void HelloChild()
+{
+msg="I am a Child Class";
+System.out.println(msg);
+}
+}
+class MainClass
+{
+public static void main(String args[])
+{
+Child ch=new Child();
+ch.HelloChild();
+ch.HelloParent();
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

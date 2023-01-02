@@ -1,0 +1,5 @@
+Q/2.7 -1.5 c and e are wrong.
+Q/2.13 -1.5 b is wrong 2%2 = 0 not 1.
+Q/2.18 -7 the shapes are not correct.
+Q/2.28 -1 diameter should be float.
+Q/2.35 -2 did not handle negative values and division by 0.

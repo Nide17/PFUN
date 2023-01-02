@@ -1,0 +1,145 @@
+Agenda of today
+-------------------
+1. Exercise on Classes and Objects
+2. Exercise on Inheritance
+3. Interfaces
+4. Introduction to Java Swing Package
+-----------------------------------------------------
+1. Exercise on Classes and Objects:
+-----------------
+Write a Java program which uses a class called CS2Java which has
+a method called getData(int,int) which prompts user to enter two numbers then
+computes their product if both numbers are less that 20 otherwise it
+computestheir sum. The program has another method called
+displayResult(int,int) which displays the results computed in
+getData method.
+-------------------------------------------------------------------------------------
+Answer:
+------------
+import javax.swing.*;
+class CS2Java
+{
+public int p,s a,b;
+public String s1,s2;
+public int getData(int x,int y)
+{
+a=x;
+b=y;
+JOptionPane op=new JOptionPane();
+s1=op.showInputDialog("Enter Number 1:");
+a=Integer.parseInt(s1);
+s2=showInputDialog(s2);
+b=Integer.parseInt(s2);
+if((a<20)&&(b<20))
+{
+p=a*b;
+}
+else
+{
+s=a+b;
+}
+}
+public int displayData(int n,int m)
+{
+System.out.println(getData(a,b))
+}
+}
+class MainClass
+{
+public static void main(String args[])
+{
+CS2Java cs=new CS2Java();
+cs.displayData(a,b);
+}
+}
+
+2. Exercise on Inheritance:
+----------------------------------
+Write a Java program which uses the concepts of inheritance, method and
+for loop to prompt user to a number between 10 and 20 then
+displays its multiplication table.
+
+import javax.swing.*;
+class MyParentEx
+{
+public int n,i;
+public String s;
+public int getNumber()
+{
+JOptionPane p=new JOptionPane();
+s=p.showInputDialog("Enter a Number:");
+n=Integer.parseInt(s);
+return 0;
+}
+}
+class MyChildEx extends MyParentEx
+{
+public void MyMultiplicationTable()
+{
+if(n>=10&&n<=20)
+{
+for(i=1;i<=n;i++)
+{
+int result=n*i;
+System.out.println(result);
+}
+}
+}
+}
+class MainClass
+{
+public static void main(String args[])
+{
+MyChildEx mc=new MyChildEx();
+mc.getNumber();
+mc.MyMultiplicationTable();
+}
+}
+---------------------------------
+3. Interface
+------------------
+-> Interface is used to implement data abstraction in Java
+-> Interface uses methods only declared without much details
+->Interfaces are implemented in a class using keyword implements
+=>Interfaces are used to implement multiple inheritance
+
+--------------------------------
+format:
+--------
+interface interfaceName
+{
+method1();
+method2();
+methodN();
+}
+----------------------
+Example:
+-------------
+public interface MyInterface
+{
+public void getName();
+public void Hello();
+public void display();
+}
+save this as MyInterface.java
+we create a new class called MyClassInt
+-------------------
+import javax.swing.*;
+public class MyClassInt implements MyInterface
+
+{
+public String name;
+public void getName()
+{
+JOptionpane op=new JOptionPane();
+name=op.showInputDialog("Enter Your Name:");
+}
+public void Hello()
+{
+System.out.println("Hello Java Interface");
+}
+public void display()
+{
+System.out.println(name+" How is Java?");
+}
+}

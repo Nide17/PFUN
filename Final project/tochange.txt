@@ -1,0 +1,12 @@
+long hierarchy
+
+checklist of the tasks - things to accomplish
+
+- record employee
+- the type of employee
+- delete employee
+
+
+alternatives:
+- linked hashmap - key (int) - value (object(of class employee))
+- make the employee object - then store it in the linked hashmap

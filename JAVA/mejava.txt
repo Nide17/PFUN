@@ -1,0 +1,42 @@
+final: means this is a constant and cannot be changed
+eg: public static final double PI=3.14;
+ static: accessed by every object of the class
+
+abstraction: without affecting another components, if i do
+ some changes to another components
+
+encapsulation; process of binding the data members with 
+corresponding services/methods.
+
+a component having data hiding and abstraction feature, then it is encapsulated 
+component. 
+
+eg;
+class Gmail{
+static private String un = ocjp;
+static private String pwd= ocjp;
+
+static public String getLogin(String u, String p){
+ 
+if (un.equals(u)  && pwd.equals(p))
+return  "success login";
+else 
+return  "fail login";
+}
+}
+ 
+class DrivenCode
+{
+pp s v m()
+{
+sop(gmail.getlogin("ocjp","ocjp");
+}
+}
+
+
+
+
+
+APPLETS
+---------------
+DEF: program that runs in the context of a browser session.

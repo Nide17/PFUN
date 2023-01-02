@@ -1,0 +1,76 @@
+Questions 4.10, 4.12, 4.14, 4.16, 4.27
+--------------------------------------
+
+4.10
+
+SIMILARITY
+----------
+
+- They are control structures that examine the condition before performing an action.
+
+DIFFERENCE
+----------
+
+- if: is a selective structure, that executes one time only by checking that a condition is true or false and choosing where to execute.
+
+- while is a repetitive structure that executes zero or more times, and repeats while the condition remains true until it becomes false. 
+
+
+4.12
+
+1. Control-statement stacking where one control statement's exit point is joined to another's an entry point.
+
+2. Control-statement nesting where the control statement can perform its actions inside another control statement.
+
+
+4.14
+
+Preincrementing increases the variable by one before using it while Postincrementing adds one to the variable after using it.
+
+
+4.16
+
+The program should print the following:
+
+1
+4
+9
+16
+25
+36
+49
+64
+81
+100
+Total is 385
+
+
+4.27
+
+Dangling-Else
+-------------
+
+a) 
+- When x = 9, y = 11;
+
+- output:
+*****
+$$$$$
+
+- When x = 11, y = 9;
+
+- output:
+$$$$$
+
+
+b)
+- When x = 9, y = 11;
+
+- output:
+*****
+
+- When x = 11, y = 9;
+
+- output:
+#####
+$$$$$

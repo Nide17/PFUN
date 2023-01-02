@@ -1,0 +1,150 @@
+Question 1
+
+
+package assignm;
+import javax.swing.*;
+
+
+
+public class Assignm { 
+    
+    public static void PascalMadeOfStars(int n)
+    { 
+      int i,j,l;
+      
+      for(i=1;i<=n;i++)
+      {
+          for(l=1;l<i;l++)
+                  System.out.print(" "+" ");
+          for(j=i;j<=n;j++)
+              System.out.print("*"+" ");
+          
+          System.out.println(" ");
+      }
+        
+    }
+    public static void DisplayMessage( int n1){
+        int i;
+        for(i=1;i<n1;i+=2)
+            System.out.println(i+". Programming is a Paradize");
+            
+    }
+
+    public static void main(String[] args) {
+        
+      JOptionPane n = new JOptionPane(System.in);
+        String s1 = n.showInputDialog(null,"Enter a number less than 10: ");
+        int num;
+        
+        num = Integer.parseInt(s1);
+        if(num>5&&num<20)
+        PascalMadeOfStars(num);
+        else 
+          DisplayMessage(num)  ;
+       
+        
+    }
+    
+}
+
+Question 2
+
+package assignm;
+import javax.swing.*;
+
+
+
+public class Assignm { 
+    
+    public static int getNumber()
+    { 
+        JOptionPane n = new JOptionPane(System.in);
+        String s1 = n.showInputDialog(null,"Enter a number less than 20: ");
+        int num;
+        
+        num = Integer.parseInt(s1);
+        
+        return num;
+      
+    }
+    public static void getName( ){
+        
+         int i,max;
+       i=1;
+       max = getNumber();
+       
+        JOptionPane n1 = new JOptionPane(System.in);
+        String name = n1.showInputDialog(null,"Typein your name: ");
+      
+        do{
+            System.out.println(i+". Hello "+name);
+            if(i==5)
+                System.out.println("Welcome to Java!");
+            i++;
+        }while(i<=max);
+       
+            
+    }
+
+    public static void main(String[] args) {
+        
+    
+      getName();
+        
+    
+}
+}
+
+Question 3
+
+package assignm;
+import javax.swing.*;
+
+
+
+public class Assignm { 
+    
+    public static void getData()
+    { 
+        JOptionPane n = new JOptionPane(System.in);
+        String s1 = n.showInputDialog(null,"Enter a number: ");
+        String s2 = n.showInputDialog(null,"Enter a number: ");
+       String s3 = n.showInputDialog(null,"Choose an operator \n 1. +\n 2. * \n 3. / \n 4. % \n ");
+        int num1, num2, op;
+        
+        num1 = Integer.parseInt(s1);
+        num2 = Integer.parseInt(s2);
+        op = Integer.parseInt(s3);
+        int sum;
+        switch (op)
+        {
+            case 1:
+                sum = num1+num2;
+                n.showMessageDialog(null, num1+"+"+num2+"="+sum);
+                break;
+            case 2:
+                 n.showMessageDialog(null, num1+"*"+num2+"="+num1*num2);
+                break;
+            case 3:
+                 n.showMessageDialog(null, num1+"/"+num2+"="+num1/num2);
+                break;
+            case 4:
+                 n.showMessageDialog(null, num1+"%"+num2+"="+num1%num2);
+                break;
+            default:
+                 n.showMessageDialog(null, "Not an operatro, please type in an operator!");
+                break;
+                
+        }
+        
+        
+        
+   }
+
+    public static void main(String[] args) {
+        
+    getData();
+     
+    
+}
+}

@@ -1,0 +1,2 @@
+- All three expressions in for loop are optional
+- Initialization of control variable (counter), Loop-continuation condition, Increment of the control variable.

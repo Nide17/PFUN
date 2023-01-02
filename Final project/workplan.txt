@@ -1,0 +1,16 @@
+WORKPLAN
+
+Methodology: Agile
+Tasks - how, when, what
+
+Research
+Design
+Code
+Test
+Deploy
+
+sprints
+phases:
+
+ 
+TASKS

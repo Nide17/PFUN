@@ -1,0 +1,63 @@
+class Person {
+	protected String firstName;
+	protected String lastName;
+	
+	public Person(String fName, String lName){
+		this.firstName = fName;
+		this.lastName = lName;
+	}
+
+	public void printPersonInfo (){
+		System.out.println("Full Name.: "+ firstName+" "+lastName);
+	}
+}
+
+class Student extends Person{
+	private String course;
+	private String regNo;
+	private double gpa;
+	
+	public Student(String fName, String lName, String course, String regNo, double gpa){
+		super(fName, lName);
+		this.course = course;
+		this.regNo = regNo;
+		this.gpa = gpa;
+	}
+
+	public void printStudentInfo (){
+		System.out.println("Reg No.: "+ regNo);
+		System.out.println("Course: "+ course);
+		System.out.println("GPA: "+ gpa);
+	}
+
+}
+
+class Staff extends Person{
+	private String jobTitle;
+	private double salary;
+	
+	public Staff(String fName, String lName, String jobTitle, double salary){
+		super(fName, lName);
+		this.jobTitle = jobTitle;
+		this.salary = salary;
+	}
+	public void printStaffInfo (){
+		System.out.println("Job title: "+ jobTitle);
+		System.out.println("Salary: "+ salary);
+	}
+	
+}
+
+class InheritanceDemo1{
+	public static void main(String args[]){
+	
+	Student john = new Student("John","Okot", "CSC","12/U/002", 4.60);
+	Staff mary = new Staff("Mary","Agaba", "Accountant", 2400000.00);
+	john.printPersonInfo();
+	john.printStudentInfo();
+	
+	mary.printPersonInfo();
+	mary.printStaffInfo();
+	}
+	
+}

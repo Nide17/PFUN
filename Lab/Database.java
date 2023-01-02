@@ -1,0 +1,7 @@
+/**
+ * Database
+ */
+public class Database {
+
+    
+}

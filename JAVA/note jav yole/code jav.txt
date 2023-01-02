@@ -1,0 +1,373 @@
+
+Introduction
+
+public class Vehicle {
+
+
+	protected String regn;
+	protected String color;
+	
+	public Vehicle(String regn, String color){
+		this.regn = regn;
+		this.color = color;
+	}
+
+	public void print(){		
+		System.out.print("\nRegistration: "+ regn);
+		System.out.println(", Color: "+ color);
+	}
+
+}
+
+//-----------------------------------------------------------------------
+public class Lorry extends Vehicle{
+	private String model; // protect to allow subclasses to access
+	private int tonnage;
+	
+	//constructor
+	public Lorry(String regn, String color, String model, int tonnage){
+		super(regn, color);
+		this.model = model;
+		this.tonnage = tonnage;
+	}
+
+	//Overriding method
+	public void print(){
+		super.print(); //calling a parent method
+		System.out.println("This "+model+" lorry has a tonnage of "+tonnage+" kgs");
+	}
+
+}
+//-----------------------------------------------------------------------
+public class Bus extends Vehicle{
+	private String model;
+	private int capacity;
+	
+	//constructor overloading
+	public Bus(String regn, String color, String model, int capacity){
+		super(regn, color);
+		this.model = model;
+		this.capacity = capacity;
+	}
+
+	public Bus(String regn, String color){
+		super(regn, color);		
+	}
+
+	public void print(){
+		super.print();
+		System.out.println("This "+model+" bus has a capacity of "+capacity+" passengers");
+	}
+	public void print2(){
+		super.print();		
+	}
+
+}
+//-----------------------------------------------------------------------
+public class Demo {
+
+	public static void main(String[] args) {
+		Lorry lorry1 = new Lorry("RAC8456","Blue", "Dyana",2000);
+		Lorry lorry2 = new Lorry("RAB0044","Orange", "Futso",3500);
+		lorry1.print();
+		lorry2.print();
+		
+		Bus bus = new Bus("RAB7643","White", "Leyland",30);
+		bus.print();
+		
+		Bus bus2 = new Bus("RAD1212","Cyan");
+		bus2.print2();
+		
+		Bus bus3 = new Bus("RAD1214","black","tata",55);
+		bus3.print2();
+		
+				
+		Vehicle varray[] = new Vehicle[4];
+		
+		varray[0] = new Lorry("RAC5555","Brown", "MAC",4000);
+		varray[1] = new Lorry("RAE45455","Siler Green", "Mitsubishi",2600);
+		varray[2] = new Bus("RAE0203","Navy Blue", "Mercedes",34);
+		varray[3] = new Bus("RAE0203","Navy Blue");
+		
+		for (Vehicle v : varray) {
+			v.print();
+		}		
+		
+	}
+
+}
+// on line 87 we are able to call a method print() that changes[morphs] depending on whatever
+// subclass has been selected from the list - therein is the principle of polymorphism 
+
+
+
+
+2
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Arrays {
+
+	public static void main(String[] args) {
+		Scanner reader = new Scanner(System.in);
+		ArrayList<String> names = new ArrayList<String>();
+		System.out.println("enter blank to quit:");
+				
+		 while (true) {		        	 
+	            System.out.print("enter a name: ");  	            
+	            String name = reader.nextLine(); 	            
+	            if (!name.equals("")) {
+	            	names.add(name);	            	
+	            	System.out.println("\nadded "+name+" to names");	
+	            }else{
+	            	break;
+	            }
+		 }	
+		 System.out.println(names.size()+" entries created in array:");
+
+		 for(int i=0; i< names.size(); i++){
+			 System.out.println(names.get(i));			 		 
+		 }
+		 
+	}
+}
+	
+	3 Classes  calculator
+
+import javax.swing.*;
+
+public class Calc {
+	
+	public static void main(String[] args) {
+		String first = JOptionPane.showInputDialog("Enter first: ");
+		String second = JOptionPane.showInputDialog("Enter next: ");
+		
+		int n1 = Integer.parseInt(first);
+		int n2 = Integer.parseInt(second);
+		int sum = n1+n2;
+		
+		JOptionPane.showMessageDialog(null,"The sum: "+sum,"CALCULATOR",JOptionPane.PLAIN_MESSAGE);
+	}
+	
+
+}
+4 Conditionals & Looping
+
+import acm.program.*;
+import acm.util.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+
+public class Graph2 extends ConsoleProgram{
+	
+	public void init() {
+		JButton but = new JButton("hi");
+		add(but,SOUTH);		
+		add(new JButton("name"), SOUTH);
+		add(new JButton("north"), NORTH);	
+		add(new JButton("eastern"), EAST);	
+		addActionListeners();			
+	}
+	
+	public void actionPerformed(ActionEvent e) {
+		String cmd = e.getActionCommand();
+		if (cmd.equals("hi")) {
+			println("hello there from the south");
+		}else if (cmd.equals("name")) {
+			println("my name is huye");
+		}else if (cmd.equals("north")) {
+			println("The Northern button");
+		}else if (cmd.equals("eastern")) {
+			println("Eastern button clicked");
+		}					
+	}}
+
+4 Encapsulation
+
+// a bouncing ball using ACM graphics
+
+import acm.program.*;
+import acm.graphics.*;
+public class BouncingBall extends GraphicsProgram {
+
+ /** Size (diameter) of the ball */
+ private static final int DIAM_BALL = 60;
+
+ /** Amount Y velocity is increased each cycle as a
+ * result of gravity */
+ private static final double GRAVITY = 10;
+
+ /** Animation delay or pause time between ball moves */
+ private static final int DELAY = 50;
+
+ /** Initial X and Y location of ball */
+ private static final double X_START = DIAM_BALL / 2;
+ private static final double Y_START = 100;
+
+ /** X Velocity */
+ private static final double X_VEL = 5;
+
+ /** Amount Y Velocity is reduced when it bounces */
+ private static final double BOUNCE_REDUCE = 0.9;
+
+ /** Starting X and Y Velocties */
+ private double xVel = X_VEL;
+ private double yVel = 0.0;
+
+ /* private instance variable */
+ private GOval ball;
+
+ public void run() {
+    setup();
+
+    // Simulation ends when ball goes off right hand
+    // end of screen
+    while (ball.getX() < getWidth()) {
+        moveBall();
+        checkForCollision();
+        pause(DELAY);
+    }
+ } 
+
+/** Create and place ball. */
+private void setup() {
+    ball = new GOval(X_START, Y_START, DIAM_BALL, DIAM_BALL);
+    ball.setFilled(true);
+    add(ball);
+}
+
+/** Update and move ball */
+private void moveBall() {
+    // increase yVelocity due to gravity on each cycle
+    yVel += GRAVITY;
+    ball.move(xVel,yVel);
+}
+
+/** Determine if collision with floor, update velocities
+* and location as appropriate. */
+private void checkForCollision() {
+    // determine if ball has dropped below the floor
+    if (ball.getY() > getHeight() - DIAM_BALL) {
+    
+        // change ball's Y velocity to now bounce upwards
+        yVel = -yVel * BOUNCE_REDUCE;
+                
+        // assume bounce will move ball an amount above the
+        // floor equal to the amount it would have dropped
+        // below the floor.
+        double diff = ball.getY() - (getHeight() - DIAM_BALL);
+        ball.move(0, -2 * diff);        
+    }
+  }
+}
+
+5 Inheritance & Polymorphism
+
+import java.awt.event.*;
+import acm.graphics.*;
+import acm.program.*;
+
+public class DragFace extends GraphicsProgram {
+/** Width of the face */
+
+private static final double FACE_WIDTH = 200;
+/** Height of the face */
+
+private static final double FACE_HEIGHT = 300;
+/** Runs the program */
+
+public void run() {
+    GFace face = new GFace(FACE_WIDTH, FACE_HEIGHT);
+    double x = (getWidth() - FACE_WIDTH) / 2;
+    double y = (getHeight() - FACE_HEIGHT) / 2;
+    add(face, x, y);
+    addMouseListeners();
+}
+
+/** Called on mouse press to record the coordinates of the click */
+public void mousePressed(MouseEvent e) {
+    lastX = e.getX();
+    lastY = e.getY();
+    gobj = getElementAt(lastX, lastY);
+}
+
+/** Called on mouse drag to reposition the object */
+public void mouseDragged(MouseEvent e) {
+    if (gobj != null) {
+    gobj.move(e.getX() - lastX, e.getY() - lastY);
+    lastX = e.getX();
+    lastY = e.getY();
+   }
+}
+
+/** Called on mouse click to move this object to the front */
+public void mouseClicked(MouseEvent e) {
+    if (gobj != null) gobj.sendToFront();
+ }
+   
+   
+/* Private state */
+private GObject gobj; /* The object being dragged */
+private double lastX; /* The last mouse X position */
+private double lastY; /* The last mouse Y position */
+}
+
+6 Graphics
+
+
+import acm.graphics.*;
+
+public class GFace extends GCompound {
+
+public GFace(double width, double height) {
+	head = new GOval(width, height);
+	leftEye = new GOval(EYE_WIDTH * width, EYE_HEIGHT * height);
+	rightEye = new GOval(EYE_WIDTH * width, EYE_HEIGHT * height);
+	nose = createNose(NOSE_WIDTH * width, NOSE_HEIGHT * height);
+	mouth = new GRect(MOUTH_WIDTH * width, MOUTH_HEIGHT * height);
+	add(head, 0, 0);
+	add(leftEye, 0.25 * width - EYE_WIDTH * width / 2,
+			0.25 * height - EYE_HEIGHT * height / 2);
+	add(rightEye, 0.75 * width - EYE_WIDTH * width / 2,
+			0.25 * height - EYE_HEIGHT * height / 2);
+	add(nose, 0.50 * width, 0.50 * height);
+	add(mouth, 0.50 * width - MOUTH_WIDTH * width / 2,
+			0.75 * height - MOUTH_HEIGHT * height / 2);
+}
+
+/** Creates a triangle for the nose */
+private GPolygon createNose(double width, double height) {
+	GPolygon poly = new GPolygon();
+	poly.addVertex(0, -height / 2);
+	poly.addVertex(width / 2, height / 2);
+	poly.addVertex(-width / 2, height / 2);
+	return poly;
+}
+
+/* Constants specifying feature size as a fraction of the head size */
+private static final double EYE_WIDTH = 0.15;
+private static final double EYE_HEIGHT = 0.15;
+private static final double NOSE_WIDTH = 0.15;
+private static final double NOSE_HEIGHT = 0.10;
+private static final double MOUTH_WIDTH = 0.50;
+private static final double MOUTH_HEIGHT = 0.03;
+
+/* Instance variables */
+private GOval head;
+private GOval leftEye, rightEye;
+private GPolygon nose;
+private GRect mouth;
+}
+
+
+
+
+
+
+
+
+
+
+
+

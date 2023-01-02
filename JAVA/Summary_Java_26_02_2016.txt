@@ -1,0 +1,157 @@
+Agenda 26/02/2016
+----------
+1. Variables in Java +Data Types
+2. Getting Input
+3. Control Statements
+4. Functions
+----------------------------------------------------
+1. Variable
+------------------
+Variable Naming:  
+- Starts with Letter or Underscore
+- No free space between letters or words of a vaiable
+- Format: Datatype  VariableName
+
+Good Examples:
+1. char c;
+2. int Reg_Number;
+3. String _First_Name;
+
+Bad Examples:
+1. int 1Age;
+2. float -price;
+3. String +car_brand;
+
+Global Variable
+---------------------
+A Variable declared before any method. This variable can be
+ used in the whole program.
+Example:
+---------------
+class CS
+{
+static String Message; //global variable
+public static void main(String args[])
+{
+Message="Hello Java Programming.";
+System.out.println(Message);
+}
+ Local Variable:
+------------------
+A local variable is the variable declared inside the method.
+This variable is accessible only inside that method.
+Example:
+----------
+class LocalVariable
+{
+public static void main(String args[])
+{
+int Age=34; //local variable
+System.out.println("Your Age is: "+Age+"\n You are to old to be in primary");
+}
+}
+}
+2. Getting User Input:
+------------------------------
+Getting User Input means interacting with Keyboard.
+There are4 ways of getting input in Java:
+-> Using DataInputStream class
+-> Using BufferedReader class
+-> Using Scanner class
+-> Using JOptionPane class
+--------------------------------------
+2.1 Using DataInputStream to get data from keyboard
+-------------------------------------------------------------
+DataInputStream is a built-in class found in java io API which 
+means we begin by importing the package io.
+
+Example:
+----------------
+import java.io.*;
+class MyInput
+{
+public static void main(String args[]) throws IOException
+{
+String s1,s2;
+DataInputStream s=new DataInputStream(System.in);
+System.out.println("Enter Your Name:");
+s1=s.readLine();
+System.out.println("Enter Your Phone_Number:");
+s2=s.readLine();
+int p_n=Integer.parseInt(s2);
+System.out.println("Your Name is: "+s1+"\n Your Phone is: "+p_n);
+}
+}
+
+----------------------------------------------------------------
+Exercise:
+-------------
+Write a Java Program which uses global and local variables to
+prompt user to enter 2 integer numbers then displays 
+their product in this format a*b=c; a,b and c are values.
+
+Answer:
+import java.io.*;
+public class BonusGrp2 {
+static int a,b,c;
+public static void main(String args[]) throws IOException{
+DataInputStream is=new DataInputStream(System.in);
+String n1,n2;
+System.out.println("Enter Number 1:");
+n1=is.readLine();
+System.out.println("Enter Number 2:");
+n2=is.readLine();
+a=Integer.parseInt(n1);
+b=Integer.parseInt(n2);
+c=a*b;
+System.out.println(a+"*"+b+"="+c);
+}   
+}
+
+------------------------------------------------
+2.4 Using JOptionPane class to get Input
+--------------------------------------------------------
+JOptionPane class is found in java swing API, we have to import
+swing package.
+
+JOptionPane will use the following methods:
+1. showInpuDialog to get data from keyboard using Graphical
+ User Interface (GUI).
+2. showMessageDialog to display on a GUI window.
+
+Example:
+---------
+import javax.swing.*;
+class MyGUI
+{
+public static void main(String args[])
+{
+JOptionPane op=new JOptionPane();
+String s=op.showInputDialog("Enter Your Name:");
+op.showMessageDialog(null, s+" Welcome to Java Programming");
+}
+}
+Exercise:
+Write a Java Program which uses global,
+Local variables and JOptionPane class to prompt user
+ to enter 2 integer numbers then displays their product.
+Answer:
+
+
+import javax.swing.*;
+
+ class BonsGUI {
+ 	static float c;
+ 	public static void main ( String args[]){
+ 		int a,b;
+ 		JOptionPane m=new JOptionPane ();
+ 		String s=m.showInputDialog (" enter number a:");
+ 		a=Integer.parseInt(s);
+ 		String n=m.showInputDialog ("enter number b:");
+ 		b=Integer.parseInt(n);
+ 		c=a+b;
+ 		System.out.print("c="+c); 
+ 	}
+    
+    
+}

@@ -1,0 +1,136 @@
+Question 7.6
+a) p[0], p[1], p[2], p[3]
+b) declaring
+c) row, column
+d) m, n, m*n
+e) d[3][5]
+
+Question 7.7
+a) False, we specify the array name and the index of the element or value we are looking for.
+b) False, the new keyword must be used to dynamically allocate the space.  => TRUE
+c) False, you have to declare it as int p = new int[100]; 
+d) False, elements of one-dimensional arrays are initialized to their defaults, zero in this case.
+e) False, it's not a must, you may also use nested while loops or add them one by one.
+
+Question 7.9
+a) int t[][] = new int [2][3];
+b) two rows
+c) three columns
+d) six elements
+e) 
+- To access the first: t[1][0]
+- To access the second: t[1][1]
+- To access the third: t[1][2]
+f)
+- To access the first: t[0][2]
+- To access the second: t[1][2]
+
+g) t[0][1] = 0;
+
+h)
+t[0][0] = 0;
+t[0][1] = 0;
+t[0][2] = 0;
+t[1][0] = 0;
+t[1][1] = 0;
+t[1][2] = 0;
+
+i)
+
+for(int i = 0; i < t.length; i++)
+	{
+
+	for(int j = 0; j < t[i].length; j++)
+		{
+		t[i][j] = 0;
+		}
+	}
+
+j)
+
+for(int i = 0; i < t.length; i++)
+	{
+
+	for(int j = 0; j < t[i].length; j++)
+		{
+		t[i][j] = Integer.parseInt(keyboard.readline());
+		}
+	}
+
+k)
+
+int minValue = t[0][0];
+
+for(int i = 0; i < t.length; i++)
+	{
+
+	for(int j = 0; j < t[i].length; j++)
+		{
+			if(t[i][j] < minValue)
+				{
+					minValue = t[i][j];
+				}
+		t[i][j] = Integer.parseInt(keyboard.readline());
+		}
+	}
+
+l)
+System.out.printf("%d%d%d\n", t[0][0], t[0][1], t[0][2]);
+
+m)  int total = t[0][2] + t[1][2];
+
+n)
+
+System.out.printf("\t0\t1\t2\n");
+
+for(int i = 0; i < t.length; i++)
+	{
+	    System.out.print(i);
+	    for(int j = 0; i < t[i].length; j++)
+		{
+		   System.out.printf("\t%d", t[i][j]);
+		}
+	     System.out.println();
+	}
+
+
+Question 7.11
+a) 
+for (int i = 0; i < counts.length; i++)
+	{
+	    counts[i] = 0;
+	}
+
+b)
+for(int i = 0; i < bonus.length; i++) 
+        {
+            bonus[i] += 1;
+        }
+
+c)
+
+for(int i = 0; i < bestScores.length; i++)
+        {
+            System.out.printf("%5d%8d%n", i, bestScores[i]);
+        }
+
+
+Question 7.13
+
+sales[ 0 ][ 0 ]
+sales[ 0 ][ 1 ]
+sales[ 0 ][ 2 ]
+sales[ 0 ][ 3 ]
+sales[ 0 ][ 4 ]
+
+sales[ 1 ][ 0 ]
+sales[ 1 ][ 1 ]
+sales[ 1 ][ 2 ]
+sales[ 1 ][ 3 ]
+sales[ 1 ][ 4 ]
+
+sales[ 2 ][ 0 ]
+sales[ 2 ][ 1 ]
+sales[ 2 ][ 2 ] 
+sales[ 2 ][ 3 ]
+sales[ 2 ][ 4 ]

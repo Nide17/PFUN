@@ -1,0 +1,103 @@
+Agenda
+-------------
+1. Excise on Interface
+2. Introduction to Java Applets
+3. Introduction to Java Swing
+----------------------------------------
+1. Exercise on Interface:
+------------------------
+Write a Java program which uses the concepts of Interface and Class.
+The program has an interface called Exercise which has two
+methods getNumber() and displaySquare(), getNumber is used
+to prompt user to enter an odd number, and displaySquare computes square of the 
+entered number displays it on screen. The class that implements Exercise is called 
+InferaceImplement.
+
+Answer:
+----------
+public interface Exercise
+{
+public void getNumber();
+public void displaySquare();
+}
+save this as Exercise.java
+-----------------------------------
+import javax.swing.*;
+public class InterfaceImplement implements Exercise
+{
+int a,sq;
+String s;
+public void getNumber()
+{
+JOptionPane p=new JOptionPane();
+s=p.showInputDialog("Enter a Number");
+a=Integer.parseInt(s);
+}
+public void DisplaySquare()
+{
+if(a%2!=0)
+{
+sq=a*a;
+System.out.println(sq);
+}
+else
+{
+System.out.println("Only Odd Numbers are used");
+}
+}
+}
+class MainClass
+{
+public static void  main(String args[])
+{
+InterfaceImplement i=new InterfaceImplement();
+i.getNumber();
+i.displaySquare();
+}
+}
+Save this as InterfaceImplement.java
+----------------------------------------------------
+2. Introduction to Java Applet
+-------------------------------------
+Applets are program code that can be interpreted by web browsers.
+->Applet program does not contain main method
+->Applet program inherits Applet Class
+->Applet is embedded in html using applet tag
+=> Applet program has an important method called paint which used
+      to display on screen.
+=>Applet has class called Graphics that has many method for
+    drawing on screen
+=>All layout and events used in applet are found in AWT Package
+=> There are two ways to run Applet: Using a web browser supported 
+       by Java or using AppletViewer tool foung JDK.
+--------------------------------------------------------------------
+Example:
+-----------
+import java.awt.*;
+import java.applet.*;
+public class MyAppletProgram extends Applet
+{
+public void paint(Graphics g)
+{
+g.drawString("Hello Applet", 200,300);
+}
+}
+save this as MyAppletProgram.java
+--------------------------------------------
+Create a HTML file:
+-------------------------
+<html>
+<head>
+<title> My First Applet</title>
+</head>
+<body>
+<applet code="MyAppletProgram.class" height=200 width=300>
+</applet>
+</body>
+</html>
+save this as applet.html
+--------------------------------
+Process of running Applet:
+-------------------------------
+1. compile applet program to create .class file
+2. run html file containing applet tag.

@@ -1,0 +1,51 @@
+PSEUDOCODES FOR ADDING 2 NUMBERS
+--------------------------------
+
+ALGORITHMS
+----------
+1. Declaring number 1
+2. Declaring number 2
+3. Declaring sum variable
+4. Assigning value to number 1
+5. Assigning value to number 2
+6. Assigning number 1 + number 2 to the sum
+7. Printing the sum
+
+PSEUDOCODES
+-----------
+Enter number1:
+Enter number2:
+sum = number1 + number2
+print sum
+
+ALGORITHMS FOR REVERSING A STRING
+----------------------------------
+
+1. Declaring the string variable
+2. Declaring the index as i
+3. Assigning value to the string
+4. Getting the length of the string as len
+5. Define a for loop as: for(i=len; i>=1; i--)
+6. Print the ith character using .substring(i-1, i) method.
+
+
+
+
+
+
+home
+emoh
+
+PSEUDOCODES FOR REVERSING A STRING
+----------------------------------
+- Enter a string
+- while it's not the first letter
+       print letters from the last to the first
+
+PSEUDOCODES FOR CHECKING A PALINDROME
+-------------------------------------
+- Enter a word
+- while it's not the first letter
+       append letters from the last to the first on reversed word
+- compare the word with reversed
+- print the result

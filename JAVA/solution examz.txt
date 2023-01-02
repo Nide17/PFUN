@@ -1,0 +1,200 @@
+section b
+question 02:
+a)
+
+package pkg1;
+
+import java.io.*;
+public class Main {
+
+       
+    public static void main(String[] args)throws IOException {
+        String s;
+        String s1;
+        float aver=0;
+        int sum=0;
+        int n;
+      DataInputStream ds=new DataInputStream(System.in);
+          
+System.out.println("Enter student1 name=");  
+s1=ds.readLine();
+System.out.println("Enter the number of module=");
+s=ds.readLine();
+n=Integer.parseInt(s);
+int a[]=new int[n];
+System.out.println("Enter the modules marks:");
+for(int i=0;i<a.length;i++)
+{
+s=ds.readLine();
+a[i]=Integer.parseInt(s);
+}
+
+System.out.println("student"+s1+ " his/hermarks are");
+System.out.print("---------------------------");
+System.out.println();
+
+for(int i=0;i<a.length;i++)
+System.out.print(a[i]+" ");
+System.out.println();
+for(int i=0;i<a.length;i++)
+sum+=a[i];
+aver=sum/n;
+
+System.out.println("=====================================");
+
+int m;
+String s2;
+String p;
+int sumu=0;
+float average=0;
+System.out.println("Enter student2 name=");  
+s2=ds.readLine();
+System.out.println("Enter the number of module=");
+p=ds.readLine();
+m=Integer.parseInt(p);
+int arr[]=new int[m];
+System.out.println("Enter the modules marks:");
+for(int j=0;j<arr.length;j++)
+{
+p=ds.readLine();
+arr[j]=Integer.parseInt(p);
+}
+
+System.out.println("student"+s2+ " his/hermarks are");
+System.out.print("----------------------------------");
+System.out.println();
+
+for(int j=0;j<arr.length;j++)
+System.out.print(arr[j]+" ");
+
+System.out.println();
+for(int j=0;j<arr.length;j++)
+sumu+=arr[j];
+average=sumu/m;
+System.out.println("==================================");
+System.out.println("average   marks of  "+s1+" ="+aver);
+System.out.println("average   marks of  "+s2+" ="+average);
+}//end main
+}//end class
+c)
+
+package overload.pkgclass.methods;
+
+
+public class OverloadClassMethods {
+
+   public void addition(int n,int m)
+{
+   
+System.out.println(n+m);
+}
+  public void addition(double x,double y,double p)
+{
+System.out.println(x*y);
+}
+    public static void main(String[] args) {
+        OverloadClassMethods op=new  OverloadClassMethods();
+        op.addition(20,50);
+        op.addition(10,30,5);
+    }
+    
+}
+
+question 04:
+a)
+import java.awt.*;
+import java.applet.Applet;
+public class news extends Applet
+{
+   public void paint(Graphics op)
+   {
+       op.drawString("OLIVIER",20,20);
+       op.drawLine(20,30,60,30);
+      
+   }
+}
+b)
+import java.net.*;
+ class JavaNet1 {
+public static void main(String[] args) throws Exception {
+InetAddress addr = InetAddress.getLocalHost();
+System.out.println("Local HostAddress: "+addr.getHostAddress());
+String hostname = addr.getHostName();
+System.out.println("Local host name: "+hostname);
+}
+}
+
+c)
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet(urlPatterns = {"/login"})
+public class login extends HttpServlet {
+
+  
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet login</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>login for</h1>");
+             out.println("username:<input type='text' name='text'><br>");
+             out.println("pasword:<input type='password' name='text'><br>");
+             out.println("<input type='button' name='submit' value='login'>");
+            out.println("</body>");
+            out.println("</html>");
+        }
+    }
+
+    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+    /**
+     * Handles the HTTP <code>GET</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    /**
+     * Handles the HTTP <code>POST</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    /**
+     * Returns a short description of the servlet.
+     *
+     * @return a String containing servlet description
+     */
+    @Override
+    public String getServletInfo() {
+        return "Short description";
+    }// </editor-fold>
+
+}

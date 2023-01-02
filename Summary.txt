@@ -1,0 +1,128 @@
+JAVA READINGS CHAPTER 3
+-----------------------
+
+SUMMARY OF MAJOR TOPICS
+-----------------------
+
+1. Declare a class and use it to create an object.
+
+- Each public class declaration must be stored in a
+file having the same name as the class and ending with the
+.java filename extension; otherwise, a compilation error will
+occur. (P300)
+
+- Every class declaration contains the keyword class followed
+immediately by the class’s name (P300)
+
+- Every class’s body is enclosed in a pair of left and right braces (P300)
+
+- class names begin with an initial uppercase letter, and method names and variable names begin with an initial lowercase letter. (300)
+
+- Instance variables exist before methods
+are called on an object, while the methods are executing and
+after the methods complete execution. Each object (instance)
+of the class has its own copy of the class’s instance variables (301)
+
+- Instance variables are declared inside a class declaration but
+outside the bodies of the class’s methods 301
+
+2. Implement a class’s behaviors as methods.
+
+
+3. Implement a class’s attributes as instance variables.
+4. Call an object’s methods to make them perform their tasks.
+
+- The number of arguments in a method call must match the
+number of parameters in the method declaration’s parameter
+list. Also, the argument types in the method call must be
+consistent with the types of the corresponding parameters in
+the method’s declaration.
+
+5. Learn what local variables of a method are and how they differ from instance variables.
+
+
+6. Learn what primitive types and reference types are.
+7. Use a constructor to initialize an object’s data.
+
+- Keyword new creates a new object of the specified class
+- requires parentheses in combination with a class name that represent a call to a constructor, which is similar to a method but is called implicitly by the new operator to initialize an object’s instance variables when the object is created.
+
+- every
+instance variable has a default initial value—a value
+provided by Java when you do not specify the instance
+variable’s initial value. null for strings
+
+- we can use object name followed by a dot separator (.) to call its methods
+
+
+8. Represent and use numbers containing decimal points.
+9. Learn why classes are a natural way to model real-world things and abstract entities.
+
+
+QUESTIONS & PAGE NUMBER
+-----------------------
+System.out.printf 310
+
+
+5 TIPS FOR WRITING JAVA PROGRAMS
+--------------------------------
+1. Calling methods
+2. prefer to list a class’s instance variables first in the class’s
+body, so that you see the names and types of the variables
+before they’re used in the class’s methods. You can list the
+class’s instance variables anywhere in the class outside its
+method declarations, but scattering the instance variables can
+lead to hard-to-read code. 301
+
+3. If a method contains a local variable with the same name as an
+instance variable (as in lines 9 and 6, respectively), that
+method’s body will refer to the local variable rather than the
+instance variable. In this case, the local variable is said to
+shadow the instance variable in the method’s body. The
+method’s body can use the keyword this to refer to the
+shadowed instance variable explicitly, as shown on the left
+side of the assignment in line 10. After line 10 executes, the
+method has completed its task, so it returns to its caller. 304
+
+We could have avoided the need for keyword this here by
+choosing a different name for the parameter in line 9, but
+using the this keyword as shown in line 10 is a widely
+accepted practice to minimize the proliferation of identifier
+names.305
+
+- The Java compiler will issue a compilation error if you
+attempt to use the value of an uninitialized local variable. This
+helps you avoid dangerous execution-time logic errors. It’s
+always better to get the errors out of your programs at
+compilation time rather than execution time. 340
+
+- Replacing duplicated code with calls to a method that contains
+one copy of that code can reduce the size of your program and
+improve its maintainability. 342
+
+- Java allows long statements to be split over multiple lines. but, Splitting a statement in the middle of an identifier or a string is a syntax error. 314
+
+-The Java compiler does not require import declarations in a
+Java source-code file if the fully qualified class name is
+specified every time a class name is used. Most Java
+programmers prefer the more concise programming style
+enabled by import declarations 320
+
+-Precede each instance variable and method declaration with
+an access modifier. Generally, instance variables should be
+declared private and methods public. Later in the book,
+we’ll discuss why you might want to declare a method 321
+
+- Even though it’s possible to do so, do not call methods from
+constructors. We’ll explain this in Chapter 10, Object-
+Oriented Programming: Polymorphism and Interfaces. 326
+
+- Unless default initialization of your class’s instance variables
+is acceptable, provide a custom constructor to ensure that your
+instance variables are properly initialized with meaningful
+values when each new object of your class is created 330
+
+- You must compile the classes in Figs. 3.1 and 3.2 before you
+can execute the app. 
+
+- to compile multiple java files javac *.java

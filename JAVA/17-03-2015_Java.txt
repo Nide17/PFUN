@@ -1,0 +1,163 @@
+17-03-2015
+--------------
+Agenda of today
+-----------------------
+1. Getting input from keyboard
+2. Using Methods (Functions)
+3. Control Structures
+--------------------------
+1. Getting Input from Keyboard
+...................................................
+1.1 Using DataInputStream class for input
+-------------------------------------------------
+This class is found in io package.
+NB: A package is collection of related classes
+Example:
+-----------
+import java.io.*;
+public class MyInput
+{
+public static void main(String args[])throws IOException
+{
+DataInputStream dis=new DataInputStream(new DataInputStream(System.in))
+String s1,s2;
+int a,b;
+s1=dis.readLine();
+a=Integer.parseInt(s1);
+s2=dis.readLine();
+b=Integer.parseInt(s2);
+int sum=a+b;
+System.out.println(sum);
+}
+}
+Exercise: Write a Java Program which uses DataInputStream class to 
+     promt user to enter a number then displays its square by saying:
+                The square of.... is....
+
+1.2 Using JOptionPane class to get input using Graphical User Interface (GUI)
+-> This class is found in swing package.
+=> JOptionPane has two important methods:
+showInputDialog() used to get input and showMessageDialog() to display on GUI
+Example:
+=======
+import javax.swing.*;
+public class MyPane
+{
+public static void main(String args[])
+{
+JOptionPane op=new JOptionPane();
+String s1=op.showInputDialog("Enter Number 1:");
+int num1=Integer.parseInt(s1);
+String s2=op.showInputDialog("Enter Number 2:");
+int num2=Integer.parseInt(s2);
+int product=num1*num2;
+op.showMessageDialog(null,"Product is:"+product);
+}
+}
+Exercise:
+------------
+Write a Java Program which uses JOptionpane class to promt
+user to enter first name and age then displays on GUI:
+  Hello....You are ....Years old.
+
+2. Using Methods
+2.1 Methods without parameters
+.......................................................
+format
+--------
+Data type MethodName()
+{
+Statements;
+}
+NB: When we call a method in main without using object, that method 
+has to be s
+static.
+
+Example:
+---------
+public class MyMethod
+{
+public static int sum() //function definition
+{
+int a=5;
+int b=10;
+int s=a+b;
+System.out.println("Sum="+s);
+}
+public static void main(String args[])
+{
+sum();  //function call
+}
+}
+--------------------------
+2.2 Method with arguments or parameters
+----------------------------------------------------
+format
+---------
+Data Type MethodName(DataType ParameterName1,DataType ParameterName,...)
+                {
+             Statements;
+            return Value;
+                 }
+Exampale:
+--------------
+public class Method_Parameter
+{
+public static String Greeting(String Fname, String Lname)
+{
+String FirstName=Fname;
+String LastName=Lname;
+System.out.println("Hello+" "+Fname+" "+Lname);
+return 0;
+}
+public static void main(String args[])
+{
+Greeting("Silas","Majyambere");
+Greeting("Peter","Manzi");
+Greeting("Aline","Ineza");
+}
+}
+-----------------------
+Classwork
+-------------
+Wring a Java Program which uses a method called
+getInput() which uses JOptionPane to prompt user to enter 2 Numbers and
+another method called DisplayResult() which displays the Modulo and
+Product of entered numbers. The program displays the last line as:
+----------------End of Display---------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

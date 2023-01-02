@@ -1,0 +1,5 @@
+Inheritance: Parent-Child relationship - inherit some of the methods from the parent
+
+Polymorphism: 
+- Static polymorphism-Overloading
+- Runtime polymorphism-Overriding

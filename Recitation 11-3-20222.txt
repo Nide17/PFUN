@@ -1,0 +1,15 @@
+- Overloading: Using the method using with different parameters.
+- Overriding: using the method inherited from the parent class, add its implementation: inheriting it, then try to change its implementation.
+
+Polymorphism: behaving in many forms: method or object
+
+Two types:
+- Compile-time polymorphism (method overloading)
+- Runtime polymorphism (method overriding)
+
+To be able to override: Animal cat = new Cat();
+
+Encapsulation: getters and setters to access hidden things
+Interface: for implementing abstracted things
+
+- When you are implementing interface methods, you can implement them differently.

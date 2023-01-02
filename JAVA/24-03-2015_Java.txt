@@ -1,0 +1,141 @@
+24-03-2015
+Java Programming
+------------------------
+Agenda
+---------
+Control Statements
+----------------------------
+1. if ---else control structure
+-------------------------------------
+format
+-------------
+if(condition)
+{
+Statements;
+}
+else
+{
+Statements;
+}
+example
+---------------
+public class MyIfElseProgram
+{
+public static void main(String args[])
+{
+int a=5;
+int b=10;
+if(b%a==0)
+{
+int c=a+b;
+System.out.println(c);
+}
+else
+{
+int c=a*b;
+System.out.println(c);
+}
+}
+}
+-------------------------------
+nested if statements
+----------------------------
+format
+------
+if(condition1)
+{
+if(condition2)
+{
+Statements;
+}
+}
+else
+{
+Statements;
+}
+---------------
+Example:
+-------------
+public class NestedIf
+{
+public static int a,b,c;
+public static void main(String args[])
+{
+a=5;
+b=10;
+if(a>0)
+{
+if(b%a!=0)
+{
+c=a+b;
+System.out.println(c);
+}
+}
+else
+{
+c=a*b;
+System.out.println(c);
+}
+}
+}
+------------------------------------
+Exercise:
+---------------
+Write a Java program which prompts user to enter 2 numbers,
+if both numbers are even numbers the program displays their sum 
+otherwise it displays their product.
+-----------------------------------------------------------------
+2. for loop
+----------------
+format
+---------
+for(initialization; condition;incrementation/decrementation)
+{
+Statements;
+}
+NB: We use loops to solve a repeatitive task.
+--------------------------------------------------------
+Example: Write a Java Program which displays Hello Java 10 times 
+               on screen.
+-----------------------------------------------------
+public class MyForLoop
+{
+public static void main(String args[])
+{
+int i;
+for(i=1;i<=10;i++)
+{
+System.out.println("Hello Java");
+}
+}
+}
+-----------------------------------
+Exercise:
+--------------
+Write a Java program which prompts user to enter 
+a number less than 15. For all odd numbers less than or
+equal to entered number the program displays 
+Hello Computer Science. For all even numbers less than or equal
+to the entered numbers it will display I like Java.
+-------------------------------------------------------
+Classwork
+--------------
+Write a Java Program which prompts user to enter 
+a number less than or equal 20, then displays the
+Pascal triangle for that number.
+for example if you enter 5:
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,68 @@
+Q/2.28 -1 diameter should be float.
+Q/2.35 -2 did not handle negative values and division by 0.
+
+----------------------------------------------------------------------------------------------------
+
+3.6
+- 1 Mark
+ - Default constructor is provided by compiler nor java (java is a programming language)
+
+3.9
+- 1 Mark
+  - Answer is not clear enough (Importing Scanner is not required when you declare class Scanner as java.util.Scanner) 
+
+
+3.13
+  -2 Marks
+     - It's not a good idea to check if salary is negative in constructor
+
+3.17
+  - 11 Marks
+  - Date of Birth should consists of attributes of Month, Day and Year of Birth
+
+  - You should have setting the date inside Employee Class instead in EmployeeTest
+
+        Calendar dateOfBirth = Calendar.getInstance();
+        dateOfBirth.set(yob, mob-1, dob);
+
+  - You forgot to change the values of heights and weights in Ms and KGs
+
+----------------------------------------------------------------------------------------------------
+
+
+Q/4.30 Did not read input as integer -3.
+General: Couldn't run your programs as you included custom package -6.
+
+----------------------------------------------------------------------------------------------------
+
+
+5.5 
+  - 2 Mark
+   you didn't describe the four basic elements of counter-controlled repetition, you outlined them instead
+
+5.6 
+  -1 Mark
+  It is impossible that for loop can run without condition
+
+----------------------------------------------------------------------------------------------------
+
+6.25
+ - 1Mark 
+   Don't instantiate an object of the class inside that class (bad design)
+   !. You should have made methods or instance variable static instead
+ - 2Marks
+   You forgot to count prime numbers found
+
+6.29
+ - 1Mark 
+   Don't instantiate an object of the class inside that class (bad design)
+   !. You should have made methods static instead or having an inner class
+ - 2Marks
+   The program should not work if argument was not passed
+ - 3Marks
+   You didn't write methods to check the CoinSide instead in your method named checkCoinSide, you are setting HeadsCounter
+
+
+12.9
+ -2 Marks 
+ There's too much margins on(bottom, left and right) and buttons are ver big

@@ -1,0 +1,25 @@
+Total Marks: 83
+
+3.6
+- 1 Mark
+ - Default constructor is provided by the compiler nor java (java is a programming language)
+
+3.9
+- 1 Mark
+  - Answer is not clear enough (Importing Scanner is not required when you declare class Scanner as java.util.Scanner) 
+
+
+3.13
+  -2 Marks
+     - It's not a good idea to check if the salary is negative in the constructor
+
+3.17
+  - 11 Marks
+  - Date of Birth should consist of attributes of Month, Day, and Year of Birth
+
+  - You should have set the date inside Employee Class instead in EmployeeTest
+
+        Calendar dateOfBirth = Calendar.getInstance();
+        dateOfBirth.set(yob, mob-1, dob);
+
+  - You forgot to change the values of heights and weights in Ms and KGs

@@ -1,0 +1,20 @@
+3.5
+- The purpose of the new keyword is to create a new instance of the class or the object of the class.
+
+- When it is used, it initializes the instance variables by calling the constructor of the class.
+
+3.6
+- It is a constructor with no parameters, provided by java to every class that doesn't have one. To initialize a newly created object of the class with a default constructor only, the instance variables are set to their default values.
+
+
+3.7
+- Those are attributes declared inside a class and are carried by every class object during their lifetime.
+
+3.8
+- System and String classes are included in java.lang package. Every Class in this package can be used without importing them because they are implicitly imported in every java program.
+
+3.9
+- This class can be used by using its fully qualified class name that is made with the full package name and class name.
+
+3.10
+- get and set methods might be provided for private instance variables to access and change the values of the variables.

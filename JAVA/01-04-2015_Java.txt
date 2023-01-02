@@ -1,0 +1,257 @@
+Agenda
+----------
+1. while loop
+2. do ...while loop
+3. switch case
+4. Introduction OOP
+-------------------------------
+1. while loop
+------------------
+format:
+-------------
+Initialization;
+while(Condition)
+{
+Statements;
+Increment/Decrement
+}
+---------------
+Example:
+--------------
+public class MyWhileLoop
+{
+public static void main(String args[])
+{
+int i=1;
+while(i<=10)
+{
+System.out.println(i+". "+"Hello CS2!!!");
+i++;
+}
+}
+}
+Output:
+----------
+1. Hello CS2!!!
+2. Hello CS2!!!
+3. Hello CS2!!!
+......
+10. Hello CS2!!!
+------------------
+Exercise:
+------------
+Write a Java Program which uses JOPtionPane class to prompt user
+to enter a Number less than 15 then uses while loop to display its
+multiplication table.
+-------------------------
+Answer:
+--------------
+import javax.swing.*;
+public class MyExerciseWhile
+{
+public static void main(String args[])
+{
+JOptionPane p=new JOptionPane();
+String s=p.showInpuDialog("Enter a Number less Than 15");
+int n,mult;
+n=Integer.parseInt(s);
+if(n<15)
+{
+int i=1;
+while(i<=n)
+{
+mult=n*i;
+System.out.println(n*i+"="+mult);
+i++;
+}
+}
+}
+}
+-----------------------------
+2. do ... while loop
+------------------------
+Format:
+---------------
+initialization;
+do
+{
+Statements;
+Increment/Decrement;
+}
+while(Condition);
+--------------------
+Example
+-------------
+public class MyDoWhile
+{
+public static void main(String args[])
+{
+int i=10;
+do
+{
+System.out.println("Java Do While Loop!");
+i--;
+}
+while(i>=1);
+}
+}
+--------------------
+Exercise:
+-----------
+Write a Java Program which uses JOptionPane and do while loop concepts.
+The program prompts user to enter a number N between 10 and 20.
+If the number is even it displays "Hello Java" N-times otherwise
+it displays "I like Java" N-times.
+----------------------------------------
+Answer:
+=========
+
+import javax.swing.*;
+public class MyExerciseDoWhile {
+public static void main(String args[])
+{
+JOptionPane op=new JOptionPane();
+String s=op.showInputDialog("Number between 10 and 20");
+int i,n;
+n=Integer.parseInt(s);
+if(n>=10&&n<=20)
+{
+if(n%2==0)
+{
+i=1;
+do
+{
+System.out.println("Hello Java");
+i++;
+}
+while(i<=n);
+}
+else
+{
+i=1;
+do
+{
+System.out.println("I like Java");
+i++;
+}
+while(i<=n);
+}
+}
+else
+{
+System.out.println("Number Not Allowed");
+}
+}
+}
+-------------------------
+3. Switch Case
+--------------------
+-> This is not a loop
+-> It uses many cases to test a condition
+-> It uses break after each case
+
+Format
+---------
+Initialization;
+Switch(TestValue)
+{
+Case Value1:
+{
+Statement;
+Break;
+}
+Case Value2:
+{
+Statements;
+Break;
+}
+...............
+Case ValueN:
+{
+Statements;
+Break;
+}
+Default:
+{
+Statements;
+}
+--------------------------------
+Example:
+--------------
+public class MySwitchExample
+{
+public static void main(String args[])
+{
+int marks=70;
+switch(marks)
+{
+case 60:
+{
+System.out.println("Satisfaction");
+break;
+}
+case 50:
+{
+System.out.println("Pass");
+break;
+}
+case 40:
+{
+System.out.println("Fail");
+break;
+}
+case 70:
+{
+System.out.println("Distinction");
+break;
+}
+default:
+{
+System.out.println("Great Distinction");
+}
+}
+}
+}
+-----------------------
+Exercise:
+----------------
+Write a Java Program which prompts user
+to enter two numbers and operator (+,-,*,/,%). The program
+uses switch case to test the entered operator. Depending on the operator,
+it computes the corresponding operation and displays the results.
+
+Example:
+10
+20
+*
+output: 10*20=200
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

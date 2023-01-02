@@ -1,0 +1,35 @@
+Question 9.9
+
+a) if super.earnings() method call is located in an overridden earnings method in a subclass means that this earnings method is accessing the superclass earnings member method with the super keyword. In other words, this method copies the parent's earnings method functionalities.
+
+b) When @Override annotation appears before a method declaration, means that the method is redefining a superclass method by using the same signature, and this is said that the subclass should override the superclass method. The subclass method overriding the superclass method can first build its functionalities based on the superclass method and add its functionalities. When this annotation is used with a method that has no corresponding method in a superclass, an error is issued by the compiler.
+
+c) When super(firstArgument, secondArgument); line of code appears as the first statement in a constructor’s body, means that the constructor is overriding or invoking the superclass' constructor with the defined arguments(firstArgument and secondArgument). This line of code must appear as the first statement in a constructor of the subclass.
+
+
+Question 9.10
+
+a) public class PieceWorker extends Employee {}
+
+b) 
+@Override
+public String toString() 
+{
+    return String.format("%s", super.toString());
+	
+}
+
+=> super.toString();
+c)
+public PieceWorker(String firstname, String lastname, String socialsecuritynumber)
+{
+    super(firstname, lastname, socialsecuritynumber);
+}
+
+
+Question 10.8
+
+Both abstract classes and interfaces can be utilized to accomplish abstraction, and both cannot be instantiated. They can both have abstract methods which are methods without implementation. The main differences between them are that abstract classes can have both abstract and non-abstract methods, while interfaces can have only abstract methods. Abstract classes are declared using the abstract keyword while the keyword interface is used to define an interface. To access an abstract class, it must be inherited from another concrete class, using the keyword “extends” and then overriding its methods while the keyword “implements” is used for implementing the interface. An abstract class like other classes doesn’t support multiple inheritances however this can be achieved using interfaces since a class can implement multiple interfaces, which makes interfaces very useful. In addition, the interface can inherit another interface only, but the abstract class can inherit another class and implement multiple interfaces. Finally, abstract classes can have a variety of variables such as static, non-static, final, and non-final variables while interfaces can have final and static variables only. Therefore, an abstract class is useful when you wish to design features that child classes can implement and override, to begin with. When you merely want to declare the functionalities without implementing them but instead wish to have them later implemented in other classes, an interface could be helpful.
+
+Interfaces can be used for unrelated classes to implement the interface
+Abstract, there is the inheritance

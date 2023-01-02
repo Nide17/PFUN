@@ -1,0 +1,25 @@
+Exercises:
+------------------
+1. Write a Java program which uses JOptionPane to ask user to enter 
+3 numbers then prints the largest number.
+2. Write a Java Program which uses JOptionPane to prompt user to
+enter a number less than 20 then displays its Pascal Triangle made of 
+Stars. Example:
+if you enter 6:
+*
+----
+* *
+-------
+* * *
+---------
+* * * *
+----------
+* * * * *
+--------------
+* * * * * *
+-----------------
+3. Write a Java Program which uses a function and loop, the function 
+   prompts user to enter a number less than 100 then it
+   uses a method called Display which uses a do ---while loop to print the last sum of the integer numbers  
+   less than or equal to that number. Use DataInputStream to get the number.
+

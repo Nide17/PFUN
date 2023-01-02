@@ -1,0 +1,198 @@
+Agenda 15-04-2016
+----------------------
+1. Applet Programming
+2. Swing Programming
+3. Java Database Connectivity
+------------------------------------  
+1. Applet Programming
+---------------------------
+-> Applet was developed to work with graphics (especially 2D Graphics)
+->All Applet classes are found in java.applet package
+-> Applet programs do not have main method
+-> Applet was also developed for Internet Programming
+-> Applet Programs run in web browser or using appletviewer tool of JDK
+
+Steps to run Applet
+------------------------
+-> Write Applet Program and save it with .java extension 
+-> compile Applet Program to produce a .class file
+-> Embed Applet in HTML using <applet> tag
+->Run a .hmtl file using web browser.
+
+Example:
+--------
+
+import java.applet.*;
+import java.awt.*;
+/*
+ <applet code="MyApplet2.class" height=150 width=250>
+ </applet>
+ */
+public class MyApplet2 extends Applet {
+public void paint(Graphics g)
+{
+g.setColor(Color.red);
+g.drawLine(40,45,190,45);
+g.setColor(Color.blue);
+g.drawString("Hello CS2 Students Group2",40,60);
+g.setColor(Color.red);
+g.drawLine(40,70,190,70);
+g.setColor(Color.green);
+g.fillRect(40,80,150,80);
+}
+}
+save this as MyApplet1.java
+Your HTML code should look like the following:
+<html>
+<head>
+<title> Applet Programming</title>
+</head>
+<body>
+<applet code="MyApplet1.class" height=200 width=300>
+</applet>
+</body>
+</html>
+save this as Test.html
+=>Test.html and MyApplet1.java must be in same folder.
+=>To run your applet you double click on Test.html
+----------------------------------------------------------------- 
+2. Java Swing
+--------------------
+-> Swing API was developed to help programmers to design faster and good
+     Graphical User Interface for small and large software applications.
+-> Swing classes were written based on applet classes, for this we
+    add J in front of applet classes.
+-> Swing Interfaces use layouts from AWT
+-> Swing programs are said to be Look and Feel, to implement this
+    for Look: we use Swing classes and Layout Classes
+    for Feel: we use Event Listeners found in java.awt.event package
+-> Swing programs are executed in main method
+--------------------------------------------------------------------------
+Example1:
+-------------------
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+public class MySwing1 extends JApplet 
+{
+	
+public static void main(String args[])
+{
+JFrame f=new JFrame("Java Swing Program");
+JLabel L1=new JLabel("Type Your Name:");
+JTextField t1=new JTextField(10);
+JButton b1=new JButton("Reset");
+JMenuBar bar=new JMenuBar();
+JMenu file=new JMenu("File");
+JMenu edit=new JMenu("Edit");
+JMenuItem fitem1=new JMenuItem("New");
+JMenuItem fitem2=new JMenuItem("Close");
+JMenuItem eitem1=new JMenuItem("Copy");
+JMenuItem eitem2=new JMenuItem("Paste");
+file.add(fitem1);
+file.add(fitem2);
+edit.add(eitem1);
+edit.add(eitem2);
+bar.add(file);
+bar.add(edit);
+f.add(bar);
+f.add(L1);
+f.add(t1);
+f.add(b1);
+f.setTitle("CS2 Swing Programming");
+f.setLayout(new FlowLayout());
+f.setVisible(true);
+f.setSize(400,500);
+}
+}
+------------------------
+Example2:
+----------
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class MySwingGroup22 extends JApplet implements ActionListener {
+JTextField t1;
+JPasswordField p;
+JButton b1;
+
+    public MySwingGroup22() 
+   {
+    
+    JLabel L1=new JLabel("Username:");
+    JLabel L2=new JLabel("Password:");
+    p=new JPasswordField(10);
+    t1=new JTextField(10);
+    b1=new JButton("Reset");
+    b1.addActionListener(this);
+    JFrame frame=new JFrame("Login Interface");
+    frame.add(L1);
+    frame.add(t1);
+    frame.add(L2);
+    frame.add(p);
+    frame.add(b1);
+    frame.setLayout(new GridLayout(4,2));
+    frame.setVisible(true);
+    frame.setSize(250,150);
+    }
+    public void actionPerformed(ActionEvent a)
+    {
+    if(a.getActionCommand()=="Reset")
+    {
+    t1.setText("");
+    p.setText("");
+    }
+    }
+ public static void main(String args[])
+ {
+MySwingGroup22 ms=new MySwingGroup22();
+ }
+}
+---------------------------------------------
+Java Database Connectivity (JDBC)
+-----------------------------
+->JDBC is a driver connecting java to almost all relational databases
+-> We have to import java.sql package
+=> Stepts to run Java Database Application
+1. Load Driver in memory
+2. Open Connection to Database
+3. Create Statement
+4. Create ResultSet
+5. Close Connection
+---------------------------------------------
+Java and MS Access
+-------------------------
+->We use JDBC ODBC Bridge.
+-> Create DataSource
+----------------------------------------
+Example:
+-----------
+
+import java.sql.*;
+public class JavaAccess1 {
+public static void main(String args[])
+{
+String driver="sun.jdbc.odbc.JdbcOdbcDriver";
+String url="jdbc:odbc:CS2DSN";
+try
+{
+Class.forName(driver);//loading Driver into memory
+Connection con=DriverManager.getConnection(url,"","");//creating connection
+Statement st=con.createStatement();//creating statement
+String q="insert into Student (FName,LName,Class,Tel,Email) values('Eric','Abimana','CS2',0788867492,'ea@gmail.com')";
+String q2="select * from Student";
+st.executeUpdate(q);
+ResultSet rs=st.executeQuery(q2);//creating a ResultSet
+while(rs.next())
+{
+System.out.println(rs.getString("FName")+" "+rs.getString("Class")+" "+rs.getInt("Tel"));
+}
+con.close()//closing a connection
+}
+catch(Exception e)
+{
+e.printStackTrace();
+}
+}
+}

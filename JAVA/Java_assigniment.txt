@@ -1,0 +1,107 @@
+Assignment of Java Programming
+Instructions:
+-Make two groups
+-Each group has to do one question
+-Deadline is 12/05/2015
+-----------------------------------
+
+Group 1:
+-------
+Using NetBeans develop a Java Application connecting MYSQL Server and do
+the following tasks:
+
+1.Application has login interface to connect to the database, the application
+is checking whether  username and password are matching with the ones in
+Database. If they are matching, you are directed to the interface which allow
+you to display the marks of a student in different courses using search by 
+Student Registration Number, marks are displayed in a table.
+if they are not matching, the program displays again login form with a 
+warning message on Top in red color:"Wrong Username or Password".
+
+2. The Application allow super Administrator after login to access interface 
+where he/she can create new login for new student, create new course and add
+marks.
+
+NB.
+--
+-You have create in database the following tables:
+Login (userId,username,password,privilege),
+Student(RegId,FirstName,LastName,Level,Email,Tel)
+Course(CourseId,CourseName,Semester)
+Marks(MarkId,CourseId,RegId,Marks), to display the marks of student you
+have to link these tables.
+
+-The above tables are in UR_CST_CS_Assignment database
+
+
+Group 2:
+--------
+Using NetBeans Develop Application which  has login interface  to connect to the database, the application is checking whether   username and password are matching with the ones in Database. 
+If they are matching, you are directed to the interface which allows:
+
+1.To use a calculator to perform different operation and saving
+the results in database called UR_CST_CS_Assignment.
+
+2.In calculator interface, you find there File and Edit Menus, in file there are
+options(save,close,logout) and Edit(select All,copy,paste). All these options in
+menus are working to add flexibility to your Application.
+
+NB.
+--
+3. By searching by Date, the Application displays the operations done on a particular date in a table.
+......................................................................................................
+- You have to create two tables in UR_CST_CS_Assignment database:
+Login(UserId,Username,Password)
+Operation(OperationId,Operand1,Operand2,Operator,Result, Date)
+- The table of results of is displayed on GUI window not in a database
+...................................................................................
+
+
+Group3:
+------
+Write a Java Program which create a User interface to add a new product
+In store, retrieve data from store table, update a record and delete data
+ in table store.  NB the table store has the fields(ProdId,ProdName,ProdPrice,ProdExpDate), this
+table is created MS Access Database called Group3_Java.
+
+
+Group4:
+------
+Write a Java Program which create a User interface to login to the System, if the login is successful you will be directed to interface. That allow you to add a new product in store, retrieve data from store table, update a record and delete data  in table store.  NB the table store has the fields(ProdId,ProdName,ProdPrice,ProdExpDate), this table is created Mysql Database called Group4_Java. If the login fails, it allows to create a new account in user table with the fields (UserId,FName,LName, UserName, Password).
+Group5:
+Write a Java Program which create a GUI with title Java Assignment Group and 
+On top there is a label containing text: Country Flags. The interface has four 
+Buttons (Rwanda,Burundi, USA, Kenya) on right side, when you click on country name
+Its flag is displayed in the middle and the name of Present for that country is 
+Displayed on bottom of the interface. 
+
+
+Group6:
+------
+Write a Java Applet Program that displays a combobox to select (Line, Rectangle, Oval, Arc) and another combobox for selecting color(Red,Blue,Yellow,Green) and a button called
+Display. After selecting and clicking the button Display, your drawing is displayed in the middle of your interface with its respective color. If no color was selected, your drawing 
+Will be in black. NB: Use appletviewer tool to run your project.
+
+
+Group7:
+------
+Write a program which displays a user interface that has the following features:
+- Two menus on top of the window (File,Tools,View)
+File Menu has 3 Items (Save, New, Close), Tools has 2 Items (Customize, Color) and View has 2 Items( Display,Hide Menu )
+- Four Labels (First Name,Last Name,Address, Phone,E-mail) and 5 corresponding Text Fields
+- Two Radio Buttons for selecting gender
+- 4 CheckBoxes for Selecting Languages
+- Two Buttons (Submit and Reset)
+- On top right corner put a Label for Search, Text Field and Search Button
+- Under Search, put a table having Fields as TextFields mentioned above
+-Under this table put Buttons: Update and Delete, put also controls (First, Previous, Next and Last)
+When you click on New Option in File Menu, the new interface is created
+With same elements. When you click on Close option, you close your application.
+When you click on submit button you send data in database. When you click on Reset button your
+Erase the content of form.
+
+
+
+
+
+

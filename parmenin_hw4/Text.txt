@@ -1,0 +1,67 @@
+Questions 5.5, 5.6, 5.7, 5.8, 5.19
+// HABIMANA Jean de Dieu
+// ISHIMWE Niyomwungeri Parmenide
+
+5.5 The four basic elements of counter-controlled repetition are:
+
+- Control variable - loop counter - number of iterations.
+- Initial value of the control variable
+- Increment of the control variable
+- Loop continuation condition
+
+5.6
+
+- "for" and "while" are used to perform repetitive tasks. for is used when we know the number of iterations to be done, "while" can be better used when we don't know the number of times to do the task.
+
+- if the condition is not specified, the "for" loop runs an infinite number of times.
+- iteration statement must be mentioned at the top.
+
+Syntax:
+-------
+
+for(initialization; condition; iteration)
+{
+statements; // body of loop
+}
+
+
+- if the condition for the "while" loop is not specified compilation error occurs.
+- iteration statement can be written anywhere inside the while block.
+
+Syntax
+------
+while( condition )
+{
+statements; // body of loop
+}
+
+5.7
+
+- It can be more appropriate to use the "do while" instead of "while" when we want to perform the task at least once before checking if the condition is met. However, "while" checks the condition first before performing a task. Therefore, "do while" executes one or more times, and "while" do this zero or more times.
+
+5.8
+
+- The break conditions stop the loop completely and execute the statement after the loop. while "continue" the continue statement stops the current iteration and executes with the upcoming value in the loop. 
+
+5.19
+
+a) System.out.println(i == 1);
+Answer: True
+
+b) System.out.println(j == 3);
+Answer: False
+
+c) System.out.println((i >= 1) && (j < 4));
+Answer: True
+
+d) System.out.println((m <= 99) & (k < m));
+Answer: False
+
+e) System.out.println((j >= i) || (k == m));
+Answer: True
+
+f) System.out.println((k + m < j) | (3 - j >= k));
+Answer: False
+
+g) System.out.println(!(k > m));
+Answer: False

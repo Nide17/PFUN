@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ScoreFragment">
+
+    <TextView
+        android:id="@+id/course_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="24dp"
+        android:text="DevOps"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="133dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/course_title">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="Student" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="Q1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="Q2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="Q3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="Q4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="Q5" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/table2"
+        android:layout_width="match_parent"
+        android:layout_height="163dp"
+        android:layout_marginTop="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="3dp"
+                android:text="High Score" />
+
+            <TextView
+                android:id="@+id/highScore1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="3dp"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/highScore2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="3dp"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/highScore3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="3dp"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/highScore4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="3dp"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/highScore5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="3dp"
+                android:text="0" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="3dp"
+                android:text="Low Score" />
+
+            <TextView
+                android:id="@+id/lowScore1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="3dp"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/lowScore2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="3dp"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/lowScore3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="3dp"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/lowScore4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="3dp"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/lowScore5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="3dp"
+                android:text="0" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="3dp"
+                android:text="Average" />
+
+            <TextView
+                android:id="@+id/averageScore1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="3dp"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/averageScore2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="3dp"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/averageScore3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="3dp"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/averageScore4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="3dp"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/averageScore5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="3dp"
+                android:text="0" />
+        </TableRow>
+    </TableLayout>
+
+</FrameLayout>

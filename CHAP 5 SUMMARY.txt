@@ -1,0 +1,1 @@
+• Typically, "for" statements are used for counter-controlled repetition and "while" statements for sentinel-controlled repetition.

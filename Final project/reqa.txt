@@ -1,0 +1,14 @@
+- the system shall allow the user to register
+- it should allow the user to get the fin. info
+- 
+
+
+Non-functional
+---------------
+- It should take 5 seconds to load
+- It should take 5 to reply on button click
+- 
+
+
+Tasks
+- 

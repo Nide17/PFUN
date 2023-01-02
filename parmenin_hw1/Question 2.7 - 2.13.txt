@@ -1,0 +1,102 @@
+Question 2.7 - 2.13 Answers
+---------------------------
+
+
+2.7) 
+a) Comments
+b) if
+c) arithmetic    - assignment??
+d) division, modulus
+e) left   - innermost set
+f) variable
+
+
+---------------------------------
+2.8)
+
+a) 
+System.out.print("Enter an integer: ")
+
+b) 
+int a;
+int b; 
+int c;
+a = b * c;
+
+c) 
+// The program performs a sample payroll
+
+
+-----------------------------------------
+2.9)
+
+a) False, They are evaluated from left to right when they have the same order of precedence, but = is evaluated from right to left.
+
+b) True
+
+c) False, They are evaluated by following operator precedence in this order: *, %, /, +, -, =
+
+d) False, h22 is valid
+
+
+---------------------------------------------
+2.10)
+
+a) x = 2
+
+b) Value of 2 + 2 is 4
+
+c) x = 
+
+d) 5 = 5
+
+
+------------------------------------------------
+2.11)
+
+a and d
+
+
+----------------------------------------------
+2.12) y = ax3 + 7
+
+ANSWER
+------
+
+a) y = a * x * x * x + 7;
+
+d) y = (a * x) * x * x + 7;
+
+e) y = a * (x * x * x) + 7;
+
+
+------------------------------------------------
+2.13)
+
+a) x = 7 + 3 * 6 / 2 - 1
+x = 7 + 18 / 2 - 1
+x = 7 + 9 - 1
+x = 15
+
+b) x = 2 % 2 + 2 * 2 - 2 / 2
+x = 2 % 2 + 4 - 2 / 2
+x = 1 + 4 - 2 / 2
+x = 1 + 4 - 1
+x = 5 - 1
+x = 4
+??
+
+b) x = 2 % 2 + 2 * 2 - 2 / 2
+x = 2 % 2 + 4 - 2 / 2
+x = 0 + 4 - 2 / 2
+x = 0 + 4 - 1
+x = 4 - 1
+x = 3
+
+
+c) x = (3 * 9 * (3 + (9 * 3 / (3))))
+x = (3 * 9 * (3 + (9 * 3 / 3)))
+x = (3 * 9 * (3 + (18 / 3)))
+x = (3 * 9 * (3 + 9))
+x = 3 * 9 * 12
+x = 324
